@@ -1,0 +1,105 @@
+/* ==========================================================================
+   About Me Page - Mobile-First Safe Layout Baseline
+   ========================================================================== */
+main {
+    width: 100% !important;
+    margin-left: 0 !important;   /* Mobile: content fills screen cleanly */
+    margin-right: 0 !important;
+    padding: 2rem 1.2rem !important; 
+    box-sizing: border-box;
+    display: block;
+}
+
+.about-header {
+    margin-bottom: 2.5rem;
+}
+
+.about-header h1 {
+    font-size: 2.4rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.about-header .subtitle {
+    color: #00a8ff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-card {
+    background-color: #161b22; /* Premium dark card background */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.about-card h3 {
+    font-size: 1.35rem;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about-card h3 i {
+    color: #00a8ff;
+}
+
+.about-card p {
+    color: #c9d1d9;
+    line-height: 1.7;
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+/* Bullet list design styles */
+.qualifications-list {
+    margin-top: 1.25rem;
+    padding-left: 1.2rem;
+    color: #c9d1d9;
+    line-height: 1.9;
+}
+
+.qualifications-list li {
+    margin-bottom: 0.5rem;
+}
+
+.qualifications-list strong {
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   DESKTOP VIEW: Maximised Horizontal Box Width Engine
+   ========================================================================== */
+@media (min-width: 1024px) {
+    main {
+        /* 1. EXTENDS RUNWAY: Blows open the page limit to allow a massive widescreen span */
+        max-width: 1600px !important; 
+        
+        margin-left: auto !important; 
+        margin-right: auto !important;
+        
+        padding-top: 4.5rem !important;
+        padding-right: 3rem !important; /* Slightly increased right edge padding */
+        padding-bottom: 4.5rem !important;
+        padding-left: 10rem !important;  /* Keeps your exact 13rem left shift locked in */
+    }
+
+    .about-grid {
+        display: grid !important;
+        /* 2. BOX STRETCH ENGINE: Dynamically splits your rows into wide, spacious panels */
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)) !important; 
+        gap: 2.5rem !important;
+        width: 100% !important;
+    }
+}

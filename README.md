@@ -1,2 +1,2 @@
 # it-portfolio
-My IT portfolio
+This is my it portfolio.
