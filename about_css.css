@@ -2,7 +2,7 @@
    About Me Page - Mobile-First Safe Layout Baseline
    ========================================================================== */
 main {
-    width: 100% !important;
+    width: 120% !important;
     margin-left: 10rem !important;   /* Mobile: clears the fixed 5rem sidebar */
     margin-right: 0 !important;
     padding: 2rem 1.2rem !important;
@@ -102,4 +102,30 @@ main {
         gap: 2.5rem !important;
         width: 100% !important;
     }
+}
+
+/* ==========================================================================
+   About Me Page Header Configuration (Matches Image Exactly)
+   ========================================================================== */
+.about-header {
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.about-header h1 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.5px;
+}
+
+.about-header .subtitle {
+    color: #00a8ff; /* Vibrant electric blue text tint matching the image */
+    font-size: 1.15rem;
+    font-weight: bold; /* Bold thickness layout matching the snapshot details */
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.4;
 }

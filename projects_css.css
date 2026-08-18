@@ -314,3 +314,51 @@ main {
     }
 }
 
+/* ==========================================================================
+   Project Page Header Banner (Matches Image Exactly)
+   ========================================================================== */
+.project-banner {
+    background: linear-gradient(135deg, #156082 0%, #004d7a 100%);
+    padding: 3rem 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.project-text h1 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: normal; /* Removes bold thickness to match image pixels */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.project-text p {
+    color: #f8fafc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+/* Forces metadata onto one single horizontal row line */
+.report-meta {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    gap: 2.5rem; /* Creates clean inline space separation between metrics */
+}
+
+.report-meta span {
+    color: #a4cbdc; /* Muted blue-grey text tint matching the image details */
+    font-size: 0.95rem;
+}
+
+/* Widescreen Desktop Scaling Adjustments */
+@media screen and (min-width: 1024px) {
+    .project-banner {
+        padding: 4.5rem 4rem; /* Expands deep breathing runway on wide monitors */
+    }
+}
