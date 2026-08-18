@@ -10,7 +10,7 @@ main {
 /* Mobile: reduce sidebar margin so content isn't pushed too far right */
 @media (max-width: 768px) {
     main, .main-container {
-    width: 150% !important;
+    width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
     padding: 2.5rem 1rem !important; /* Lowers side padding to 1rem so text has absolute maximum room to stretch */
@@ -86,6 +86,30 @@ main {
     gap: 1.5rem;
 }
 
+/* ==========================================================================
+   WIDESCREEN ENGINE: Restores Desktop Sidebar Separation & Layout Balance
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+    main, .main-container {
+        max-width: 1650px !important;    /* Expanded track space bounds */
+        margin-left: 11.5rem !important; /* Premium sidebar tracking clearance */
+        padding-left: 16rem !important;  /* Restores your large widescreen separation gap */
+        padding-right: 4rem !important;
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+    }
+
+    .home-container {
+        flex-direction: row !important; /* Side-by-side split row viewports for monitor screens */
+        align-items: flex-start !important;
+        gap: 6rem !important; 
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important; /* Restores side-by-side rows on desktop views */
+    }
+}
+
 
 .skill-card {
     background-color: #161b22; 
@@ -113,8 +137,6 @@ main {
     line-height: 1.6;
 }
 
-
-@media (min-width: 1024px) {
     /* 1. Paste the fixed desktop spacing rules right here: */
     main, .main-container {
         max-width: 1650px !important;    
@@ -149,7 +171,7 @@ main {
     .hero-title-inline h1 {
         white-space: nowrap;
     }
-}
+
 
 
 /* ==========================================================================

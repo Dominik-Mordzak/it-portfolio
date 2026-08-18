@@ -252,3 +252,23 @@ main, .main-container {
         border-color: #00a8ff !important;
     }
 }
+/* ADD THIS COB OUT IN THE OPEN (NOT INSIDE A MEDIA QUERY) FOR YOUR S22+ */
+.evidence-grid.full-width-terminal {
+    display: flex !important;
+    flex-direction: column !important; /* Forces vertical stacking on your phone */
+    gap: 1.5rem !important;            /* Clean mobile spacing */
+    width: 100% !important;            /* Fills out the screen width completely */
+    max-width: 100% !important;
+}
+
+.evidence-grid.full-width-terminal .clear-view {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.evidence-grid.full-width-terminal .clear-view img {
+    width: 100% !important;
+    height: auto !important;          /* Scales proportionally on your device */
+    object-fit: contain !important;
+    background-color: #010a10;
+}
