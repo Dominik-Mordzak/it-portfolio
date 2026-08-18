@@ -3,7 +3,7 @@
    ========================================================================== */
 main {
     width: 100% !important;
-    margin-left: 5rem !important;   /* Mobile: clears the fixed 5rem sidebar */
+    margin-left: 10rem !important;   /* Mobile: clears the fixed 5rem sidebar */
     margin-right: 0 !important;
     padding: 2rem 1.2rem !important;
     box-sizing: border-box;

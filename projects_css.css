@@ -116,7 +116,7 @@ main {
 
 /* Responsive adjustment for small displays */
 @media (max-width: 768px) {
-    main { margin-left: 5rem !important; padding: 2rem 1rem !important; }
+    main { margin-left: 10rem !important; padding: 2rem 1rem !important; }
     .case-section { padding: 1.5rem; }
     .evidence-grid.dual-row.small-figures .evidence-card { max-width: 100%; }
 }
