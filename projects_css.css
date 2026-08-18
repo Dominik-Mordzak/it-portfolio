@@ -1,24 +1,19 @@
 /* ==========================================================================
-   1. GLOBAL MOBILE-FIRST BASELINES (Default Styles for Phone Displays)
+   1. GLOBAL MOBILE-FIRST BASELINES (Default Styles for Phone Viewports)
    ========================================================================== */
-* {
-    box-sizing: border-box;
-}
-
-main {
-    max-width: 1450px !important;
-    margin-left: 0 !important;      /* Drops desktop sidebar offset on mobile */
+.main-container {
+    width: 100% !important;
+    margin-left: 0 !important;
     margin-right: auto !important;
-    padding: 2rem 1.2rem !important; /* Content stretches beautifully across mobile glass */
-    width: 100%;
+    padding: 2rem 1.2rem !important; 
+    display: block;
 }
 
-/* Individual Case Phase Card Layouts */
 .case-section {
     background-color: #161b22; 
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 0.5rem;
-    padding: 1.5rem; /* Safe padding for phone displays */
+    padding: 1.5rem;
     margin-bottom: 2.5rem;
 }
 
@@ -36,10 +31,9 @@ main {
     margin-bottom: 1.5rem;
 }
 
-/* Evidence Layout System: Stacked vertically by default on mobile devices */
 .evidence-grid {
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: column !important; /* Stacked layout default for mobile screens */
     gap: 1.5rem !important;
     width: 100% !important;
     margin-top: 2rem;
@@ -57,7 +51,6 @@ main {
     flex-direction: column;
 }
 
-/* Fluid responsive images on mobile */
 .evidence-card img, .doc-card img {
     width: 100% !important;
     height: auto !important;
@@ -83,43 +76,42 @@ main {
     margin-bottom: 0.25rem;
 }
 
-/* Click-to-zoom target wrapper layout */
 .doc-card a {
     display: block;
     width: 100%;
 }
 
-
 /* ==========================================================================
    2. DESKTOP WIDESCREEN SHIFT (Applies only to screens 1024px or wider)
    ========================================================================== */
 @media screen and (min-width: 1024px) {
-    
-    main {
-        margin-left: 9.5rem !important; /* Safely clears your left sidebar navigation */
-        padding-left: 13rem !important;  /* Desktop media query gap shift injection */
+    .main-container {
+        max-width: 1450px !important;
+        margin-left: 9.5rem !important; /* Standard sidebar clearance */
+        padding-left: 13rem !important;  /* Desktop padding-left shift criteria */
+        padding-top: 3.5rem !important;
+        padding-right: 2rem !important;
+        padding-bottom: 3.5rem !important;
     }
 
     .case-section {
-        padding: 2.5rem; /* Roomier layout padding for wide screens */
+        padding: 2.5rem;
     }
 
-    /* Standard 50/50 Dual Row Grid Systems (Phases 1 & 3) */
     .evidence-grid.dual-row.small-figures {
         display: grid !important;
-        grid-template-columns: 1fr 1fr !important; /* Symmetrical split */
+        grid-template-columns: 1fr 1fr !important; /* Clean side-by-side splits for Phases 1 & 3 */
         gap: 2.5rem !important;
         max-width: 1150px !important;
         margin-left: auto;
         margin-right: auto;
     }
 
-    /* THE READABILITY FIX: Removes strict height traps that squish text pixels */
     .doc-card img {
         width: 100% !important;
-        height: auto !important; /* Allows the image to scale proportionally without warping */
-        max-height: 380px; /* Safety ceiling to keep the images compact on the screen */
-        object-fit: contain !important; /* Ensures 100% of your console view stays visible */
+        height: auto !important;
+        max-height: 380px; 
+        object-fit: contain !important;
         background-color: #010a10; 
         border-radius: 0.3rem;
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -136,45 +128,41 @@ main {
         border-color: #00a8ff !important;
     }
 
-    /* Custom clip box to pull terminal text closer in Figure 2.1 */
     .macro-zoom-cli a {
         display: block;
         width: 100%;
-        height: 340px; /* Locks bounding height to match the sibling card */
-        overflow: hidden; /* Cuts away excessive blank outer margins */
+        height: 340px; 
+        overflow: hidden; 
         border-radius: 0.3rem;
         border: 1px solid rgba(255, 255, 255, 0.1);
         background-color: #010a10;
     }
 
     .macro-zoom-cli img {
-        width: 135% !important; /* Blows up the screenshot asset layout scaling */
+        width: 135% !important;
         height: auto !important;
-        transform: translate(-12%, -5%); /* Shifts center focus right over the text lines */
+        transform: translate(-12%, -5%); 
         border: none !important;
     }
 
-    /* PHASE 2 MAXIMUM TEXT MAGNIFICATION ENGINE (80/20 Widescreen Split) */
+    /* PHASE 2: TAILORED 80/20 WIDESCREEN GRID SPLIT */
     .evidence-grid.phase2-grid {
         display: grid !important;
-        grid-template-columns: 4fr 1fr !important; /* 80% / 20% precise desktop layout split */
+        grid-template-columns: 4fr 1fr !important; /* Precise 80% / 20% desktop layout engine */
         gap: 2.5rem !important;
-        max-width: 1300px !important; /* Prevents structural layout wrapping */
+        max-width: 1300px !important;
         margin-left: auto;
         margin-right: auto;
         align-items: start;
     }
 
-    /* Expands terminal text lines to their absolute maximum proportional scale */
     .phase2-grid .doc-card img {
         width: 100% !important;
         height: auto !important; 
-        max-height: 520px !important; /* Added extra ceiling room for full text expansion */
+        max-height: 520px !important; /* Added roof padding to expand console readability */
         object-fit: contain !important;
-        background-color: #010a10; 
     }
 
-    /* Keeps captions looking clean underneath the ultra-wide layout */
     .phase2-grid .doc-card figcaption {
         font-size: 0.85rem !important;
         line-height: 1.4;

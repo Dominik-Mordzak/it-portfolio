@@ -1,14 +1,10 @@
 /* ==========================================================================
-   1. GLOBAL MOBILE-FIRST BASELINES (Default Styles for Phone Displays)
+   1. GLOBAL MOBILE-FIRST BASELINES (Default Styles for Phone Viewports)
    ========================================================================== */
-* {
-    box-sizing: border-box;
-}
-
-main {
+.main-container {
     width: 100% !important;
-    margin-left: 0 !important;   /* Mobile: content fills screen cleanly without squeeze */
-    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
     padding: 2rem 1.2rem !important; 
     display: block;
 }
@@ -33,12 +29,13 @@ main {
 
 .about-grid {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stacked columns default for phone screens */
     gap: 2rem;
+    width: 100%;
 }
 
 .about-card {
-    background-color: #161b22; /* Premium dark card background */
+    background-color: #161b22; 
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 0.5rem;
     padding: 2rem;
@@ -49,13 +46,6 @@ main {
     color: #ffffff;
     margin-top: 0;
     margin-bottom: 1.25rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.about-card h3 i {
-    color: #00a8ff;
 }
 
 .about-card p {
@@ -65,7 +55,6 @@ main {
     font-size: 1.05rem;
 }
 
-/* Qualifications & Principles Bullet Lists Layout */
 .qualifications-list, .principles-list {
     margin-top: 1.25rem;
     padding-left: 1.2rem;
@@ -82,24 +71,22 @@ main {
     color: #ffffff;
 }
 
-
 /* ==========================================================================
-   2. DESKTOP VIEW: Maximised Horizontal Box Width Engine
+   2. DESKTOP WIDESCREEN SHIFT (Applies only to screens 1024px or wider)
    ========================================================================== */
 @media screen and (min-width: 1024px) {
-    main {
-        max-width: 1600px !important; /* Extends horizontal space to allow a massive widescreen span */
-        margin-left: 9.5rem !important; /* Safely clears your left sidebar navigation element */
-        
+    .main-container {
+        max-width: 1600px !important; /* Roomy width bounds for big screens */
+        margin-left: 9.5rem !important; /* Standard sidebar clearance */
+        padding-left: 13rem !important;  /* Desktop padding-left shift criteria */
         padding-top: 4.5rem !important;
         padding-right: 3rem !important; 
         padding-bottom: 4.5rem !important;
-        padding-left: 13rem !important;  /* Desktop media query gap shift injection */
     }
 
     .about-grid {
         display: grid !important;
-        /* BOX STRETCH ENGINE: Dynamically splits your rows into wide, spacious panels */
+        /* BOX STRETCH ENGINE: Splits panels elegantly on widescreen layout viewports */
         grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)) !important; 
         gap: 2.5rem !important;
         width: 100% !important;
