@@ -3,7 +3,7 @@
    ========================================================================== */
 main {
     max-width: 1450px !important;
-    margin-left: 9.5rem !important; /* Clears your sidebar perfectly */
+    margin-left: 12rem !important; /* Clears your sidebar perfectly */
     margin-right: auto !important;
     box-sizing: border-box;
     padding-left: 2rem;
