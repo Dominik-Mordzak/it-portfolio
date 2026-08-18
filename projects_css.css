@@ -117,7 +117,7 @@ main {
 /* Responsive adjustment for small displays */
 @media (max-width: 768px) {
     main, .main-container {
-    width: 100% !important;
+    width: 130% !important;
     max-width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
