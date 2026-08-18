@@ -5,13 +5,20 @@ main {
     width: 120% !important;
     margin-left: 10rem !important;   /* Mobile: clears the fixed 5rem sidebar */
     margin-right: 0 !important;
-    padding: 2rem 1.2rem !important;
+    padding: 1rem 1.2rem !important;
     box-sizing: border-box;
     display: block;
 }
 
 .about-header {
-    margin-bottom: 2.5rem;
+    background: linear-gradient(135deg, #156082 0%, #004d7a 100%); /* Same premium blue background layout gradient */
+    padding: 3rem 2rem; /* Clean internal breathing space around the profile text text */
+    margin-top: 1rem; /* Creates a uniform spacing gap from the top of the viewport ceiling */
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    margin-bottom: 3rem;
+    text-align: left;
 }
 
 .about-header h1 {
@@ -104,28 +111,3 @@ main {
     }
 }
 
-/* ==========================================================================
-   About Me Page Header Configuration (Matches Image Exactly)
-   ========================================================================== */
-.about-header {
-    margin-bottom: 2.5rem;
-    text-align: left;
-}
-
-.about-header h1 {
-    font-size: 2.8rem;
-    color: #ffffff;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-    letter-spacing: -0.5px;
-}
-
-.about-header .subtitle {
-    color: #00a8ff; /* Vibrant electric blue text tint matching the image */
-    font-size: 1.15rem;
-    font-weight: bold; /* Bold thickness layout matching the snapshot details */
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 1.4;
-}

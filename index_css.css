@@ -24,8 +24,16 @@ main {
 
 /* The Left Side Column: Text content configuration */
 .hero-section {
-    max-width: 100%;
+    background: linear-gradient(135deg, #156082 0%, #004d7a 100%); /* Same premium blue background gradient */
+    padding: 3rem 2rem; /* Clean internal breathing space around the hero text */
+    margin-top: 3.5rem; /* Creates a uniform spacing gap from the top of the viewport ceiling */
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    margin-bottom: 3rem;
+    text-align: left;
 }
+
 
 .hero-title-inline h1 {
     font-size: 3rem;
@@ -190,41 +198,4 @@ main {
 }
 
 
-/* ==========================================================================
-   Homepage Hero Header Configuration (Matches Image Exactly)
-   ========================================================================== */
-.hero-section {
-    text-align: left;
-    margin-bottom: 2.5rem;
-}
 
-.hero-title-inline h1 {
-    font-size: 3.25rem;
-    color: #ffffff;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-    letter-spacing: -0.5px;
-}
-
-.hero-title-inline h2 {
-    color: #00a8ff; /* Vibrant electric blue text tint matching the image */
-    font-size: 1.35rem;
-    font-weight: bold; /* Bold thickness layout matching the snapshot details */
-    margin-top: 0;
-    margin-bottom: 2.25rem;
-    line-height: 1.4;
-}
-
-.elevator-pitch {
-    color: #e2e8f0;
-    font-size: 1.15rem;
-    line-height: 1.8;
-    margin-top: 0;
-    max-width: 720px; /* Keeps the text body block from stretching too wide */
-}
-
-.elevator-pitch strong {
-    color: #ffffff;
-    font-weight: bold;
-}

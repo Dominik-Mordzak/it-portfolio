@@ -319,12 +319,14 @@ main {
    ========================================================================== */
 .project-banner {
     background: linear-gradient(135deg, #156082 0%, #004d7a 100%);
-    padding: 3rem 2rem;
+    padding: 3rem 2rem; /* Clean default padding layout around text */
+    margin-top: 3.5rem; /* Creates a comfortable spacing gap from the top of the page */
     border-radius: 0.75rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     width: 100%;
     margin-bottom: 3rem;
 }
+
 
 .project-text h1 {
     font-size: 2.2rem;
