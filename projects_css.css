@@ -168,7 +168,7 @@ main, .main-container {
 }
 
 
-@media (min-width: 1024px) {
+
     /* 1. Paste this desktop spacing engine block right at the top: */
     main, .main-container {
         max-width: 1650px !important;   
@@ -251,7 +251,7 @@ main, .main-container {
         transform: scale(1.01);
         border-color: #00a8ff !important;
     }
-}
+
 /* ADD THIS COB OUT IN THE OPEN (NOT INSIDE A MEDIA QUERY) FOR YOUR S22+ */
 .evidence-grid.full-width-terminal {
     display: flex !important;
