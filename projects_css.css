@@ -168,16 +168,17 @@ main, .main-container {
 }
 
 
-
+@media (min-width: 1024px) {
     /* 1. Paste this desktop spacing engine block right at the top: */
     main, .main-container {
-        max-width: 1650px !important;   
-        margin-left: 11.5rem !important; /* Premium sidebar tracking clearance */
-        padding-left: 16rem !important;  /* Restores your large widescreen separation gap */
-        padding-right: 4rem !important;
-        padding-top: 3.5rem !important;
-        padding-bottom: 3.5rem !important;
-    }
+    max-width: 1550px !important;   
+    margin-left: 10rem !important;   /* Matches your exact sidebar alignment track */
+    padding-left: 5rem !important;    /* Injects the identical visual padding channel */
+    padding-right: 2.5rem !important;
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+}
+
 
     /* 2. All your existing widescreen project styles follow right below it: */
     .project-banner {
@@ -251,7 +252,7 @@ main, .main-container {
         transform: scale(1.01);
         border-color: #00a8ff !important;
     }
-
+}
 /* ADD THIS COB OUT IN THE OPEN (NOT INSIDE A MEDIA QUERY) FOR YOUR S22+ */
 .evidence-grid.full-width-terminal {
     display: flex !important;

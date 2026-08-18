@@ -29,14 +29,15 @@ main {
 /* The Left Side Column: Text content configuration */
 .hero-section {
     background: linear-gradient(135deg, #156082 0%, #004d7a 100%); /* Same premium blue background gradient */
-    padding: 3rem 2rem; /* Clean internal breathing space around the hero text */
+    padding: 4.5rem 3.5rem !important; /* Expands deep layout breathing padding around your name and title */
     margin-top: 3.5rem; /* Creates a uniform spacing gap from the top of the viewport ceiling */
     border-radius: 0.75rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     width: 100%;
     margin-bottom: 3rem;
     text-align: left;
-}
+    flex: 1.4 !important;
+    }
 
 
 .hero-title-inline h1 {
@@ -91,13 +92,14 @@ main {
    ========================================================================== */
 @media screen and (min-width: 1024px) {
     main, .main-container {
-        max-width: 1650px !important;    /* Expanded track space bounds */
-        margin-left: 6rem !important; /* Premium sidebar tracking clearance */
-        padding-left: 10rem !important;  /* Restores your large widescreen separation gap */
-        padding-right: 7rem !important;
-        padding-top: 3.5rem !important;
-        padding-bottom: 3.5rem !important;
-    }
+    max-width: 1550px !important;    
+    margin-left: 10rem !important;   /* Pulls content closer to the sidebar menu */
+    padding-left: 5rem !important;    /* Narrows the empty space so your header and cards widen */
+    padding-right: 2.5rem !important;
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+}
+
 
     .home-container {
         flex-direction: row !important; /* Side-by-side split row viewports for monitor screens */
