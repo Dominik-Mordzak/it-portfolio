@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: #0B2536; /* Muted tech dark background */
+    color: #c9d1d9; 
+    height: 100%;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column; /* Standard stacked layout for phone viewports */
+    gap: 3.5rem;
+}
+
+/* ==========================================================================
+   1. Stationary Base Sidebar
+   ========================================================================== */
+aside {
+    position: fixed;
+    inset: 0 auto 0 0;
+    padding: 1.5rem 0; 
+    width: 5rem; 
+    background-color: #156082; /* Your primary sidebar blue */
+    z-index: 100;
+}
+
+nav {
+    height: 100%;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+nav li {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+/* ==========================================================================
+   2. Absolute Sliding Links (Blue Theme)
+   ========================================================================== */
+nav a {
+    display: flex;
+    align-items: center;
+    padding: 0 0.85rem; 
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #ffffff; /* All text is now crisp white */
+    border-radius: 0.375rem;
+    
+    position: absolute;
+    left: 0.65rem; 
+    height: 3rem;
+    width: 3.7rem; 
+    
+    transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Base Icon Color */
+nav a i {
+    color: #ffffff; 
+    font-size: 1.5rem; 
+    min-width: 2rem; 
+    text-align: center;
+}
+
+/* ==========================================================================
+   3. Blue Expansion Mechanics (Active & Hover)
+   ========================================================================== */
+
+/* RULE A: The ACTIVE page link expands to fit its specific text exactly */
+nav a.active {
+    background-color: #004d7a; 
+    color: #ffffff; 
+    font-weight: bold;
+    width: max-content; /* Hugs the text perfectly instead of using a big 14rem block! */
+    padding-right: 1.25rem; /* Adds clean breathing room after the text ends */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+nav a.active i {
+    color: #ffffff;
+}
+
+/* RULE B: HOVERING expands only to the size of that item's specific text */
+nav a:hover {
+    width: max-content; /* Dynamically grows to match the exact word length */
+    padding-right: 1.25rem; /* Balanced edge spacing */
+    background-color: #1d729a; 
+    color: #ffffff; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 20; 
+}
+
+/* Keep active state stable on hover */
+nav a.active:hover {
+    background-color: #004d7a;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   4. Text Visibility Controls
+   ========================================================================== */
+nav a span {
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 0.75rem;
+    transition: opacity 0.15s ease;
+}
+
+nav a.active span,
+nav a:hover span {
+    opacity: 1;
+    visibility: visible;
+}

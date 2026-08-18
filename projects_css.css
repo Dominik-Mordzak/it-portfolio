@@ -1,0 +1,316 @@
+/* ==========================================================================
+   Project Case Study Dashboard Layout & Grid System
+   ========================================================================== */
+main {
+    max-width: 1450px !important;
+    margin-left: 9.5rem !important; /* Clears your sidebar perfectly */
+    margin-right: auto !important;
+    box-sizing: border-box;
+    padding-left: 2rem;
+}
+
+/* Individual Case Phase Card Layouts */
+.case-section {
+    background-color: #161b22; 
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.5rem;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.case-section h3 {
+    font-size: 1.35rem;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+}
+
+.case-section p {
+    color: #c9d1d9;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Flexbox Row Configuration */
+.evidence-grid.dual-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+/* ==========================================================================
+   WIDESCREEN ROW ENGINE: Perfect Equal Spacing & Image Sizing Balance
+   ========================================================================== */
+@media (min-width: 768px) {
+    /* Compact container layout */
+    .evidence-grid.dual-row.small-figures {
+        max-width: 850px; /* Widened slightly to give text and photos a premium runway */
+        margin-left: auto;
+        margin-right: auto;
+        
+        /* THE PERFECT SPACING FIX */
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* Forces BOTH columns to be exactly identical in size */
+        gap: 2.5rem !important; /* Creates a beautifully uniform spacing wall between them */
+    }
+
+    /* Fixed equal card size containers */
+    .evidence-grid.dual-row.small-figures .evidence-card {
+        max-width: 100% !important; /* Allows the grid engine above to handle the balancing perfectly */
+        width: 100% !important;
+        padding: 1.25rem;
+        background-color: #0d1117;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* THE PHASE 3 IMAGE FIX: Forces all images to expand and fill their bounding box boundaries uniformly */
+    .evidence-card img {
+        width: 100% !important;
+        height: 240px !important; /* Locks a symmetrical height so all figures across your site match up exactly */
+        object-fit: cover !important; /* Smart crop utility: fills the frame without warping or blurring your screenshots */
+        border-radius: 0.3rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 1.25rem;
+    }
+}
+
+
+.evidence-grid.dual-row.small-figures .evidence-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: calc(50% - 0.75rem); /* Keeps them tightly parallel horizontally */
+    background-color: #0d1117;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.evidence-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.evidence-card figcaption {
+    text-align: left;
+    color: #8b949e;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.evidence-card figcaption strong {
+    color: #ffffff;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-bottom: 0.25rem;
+}
+
+/* Responsive adjustment for small displays */
+@media (max-width: 768px) {
+    main { margin-left: 5rem !important; padding: 2rem 1rem !important; }
+    .case-section { padding: 1.5rem; }
+    .evidence-grid.dual-row.small-figures .evidence-card { max-width: 100%; }
+}
+
+/* ==========================================================================
+   Universal Documentation Layout Engine (Full View Preservation)
+   ========================================================================== */
+@media (min-width: 1024px) {
+    /* Widens the grids across ALL phases for professional layout scaling */
+    .evidence-grid.dual-row.small-figures.doc-boost {
+        max-width: 1100px !important; 
+        margin-left: auto;
+        margin-right: auto;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 3rem !important;
+    }
+
+    /* Standardizes card containers across the site */
+    .doc-card {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 1.5rem !important;
+        background-color: #0d1117;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* GLOBAL FIX: Scales up ALL images to be large, readable, and completely unclipped */
+    .doc-card img {
+        width: 100% !important;
+        height: 340px !important; /* Increased height so screenshots are huge and detailed */
+        object-fit: contain !important; /* Forces 100% of the image to show without any cropping */
+        background-color: #010a10; /* Clean dark backing to frame documents and photos uniformly */
+        border-radius: 0.3rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 1.25rem;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    /* Unified Click-to-Zoom Mouse State */
+    .doc-card a {
+        display: block;
+        width: 100%;
+        cursor: zoom-in;
+    }
+
+    /* Micro-Zoom glow effect on hover */
+    .doc-card a:hover img {
+        transform: scale(1.02);
+        border-color: #00a8ff !important;
+    }
+}
+
+/* Maintain mobile responsisvity */
+@media (max-width: 1023px) {
+    .evidence-grid.dual-row.small-figures.doc-boost {
+        display: flex !important;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .doc-card img {
+        height: auto !important;
+        object-fit: contain !important;
+    }
+}
+
+/* ==========================================================================
+   Full-Width Terminal Engine (Forces High Readability for Phase 2)
+   ========================================================================== */
+@media (min-width: 768px) {
+    /* Formats the Phase 2 container into stacked, roomy rows */
+    .evidence-grid.full-width-terminal {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2.5rem !important;
+        max-width: 1000px !important; /* Expands horizontal runway */
+        margin: 2rem auto 0 auto;
+    }
+
+    /* Expands the cards to use 100% of the available width space */
+    .evidence-grid.full-width-terminal .clear-view {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Magnifies the specific screenshots while keeping them unclipped */
+    .evidence-grid.full-width-terminal .clear-view img {
+        width: 100% !important;
+        height: 460px !important; /* Jacked up by 120px so the terminal text is massive */
+        object-fit: contain !important;
+        background-color: #010a10;
+    }
+}
+
+/* ==========================================================================
+   Universal Documentation Layout Engine (Crisp Text & Symmetrical Row)
+   ========================================================================== */
+@media (min-width: 1024px) {
+    /* Hardlocks a roomy horizontal row layout with equal columns */
+    .evidence-grid.dual-row.small-figures.doc-boost {
+        max-width: 1150px !important; /* Widened slightly so side-by-side cards have more room */
+        margin-left: auto;
+        margin-right: auto;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 3rem !important; /* Premium uniform spacing channel */
+    }
+
+    .doc-card {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 1.5rem !important;
+        background-color: #0d1117;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* THE READABILITY FIX: Removes strict height traps that squish text pixels */
+    .doc-card img {
+        width: 100% !important;
+        height: auto !important; /* Crucial: Allows the image to scale proportionally without warping */
+        max-height: 380px; /* Safety ceiling to keep the images compact on the screen */
+        object-fit: contain !important; /* Ensures 100% of your console view stays visible */
+        background-color: #010a10; 
+        border-radius: 0.3rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 1.25rem;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .doc-card a {
+        display: block;
+        width: 100%;
+        cursor: zoom-in;
+    }
+
+    .doc-card a:hover img {
+        transform: scale(1.01);
+        border-color: #00a8ff !important;
+    }
+}
+
+/* Custom clip box to pull terminal text closer in Figure 2.1 */
+@media (min-width: 1024px) {
+    .macro-zoom-cli a {
+        display: block;
+        width: 100%;
+        height: 340px; /* Locks bounding height to match the sibling card */
+        overflow: hidden; /* Elegantly cuts away excessive blank outer margins */
+        border-radius: 0.3rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: #010a10;
+    }
+
+    .macro-zoom-cli img {
+        width: 135% !important; /* Blows up the screenshot asset layout scaling */
+        height: auto !important;
+        transform: translate(-12%, -5%); /* Perfectly shifts the center focus right over the text lines */
+        border: none !important;
+    }
+}
+
+/* ==========================================================================
+   Phase 2 Maximum Text Magnification Engine (80/20 Widescreen Split)
+   ========================================================================== */
+@media (min-width: 1024px) {
+    .evidence-grid.phase2-grid {
+        display: grid !important;
+        /* THE CRITICAL SHIFT: Boosted to 4fr 1fr (80% / 20%) to hit your exact size goal */
+        grid-template-columns: 4fr 1fr !important; 
+        gap: 2.5rem !important;
+        max-width: 1300px !important; /* Widened slightly to prevent any structural wrapping */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Expands the terminal text lines to their absolute maximum proportional scale */
+    .phase2-grid .doc-card img {
+        width: 100% !important;
+        height: auto !important; 
+        max-height: 520px !important; /* Added extra ceiling room to allow full text expansion */
+        object-fit: contain !important;
+        background-color: #010a10; 
+    }
+
+    /* Keeps captions looking clean underneath the ultra-wide layout */
+    .phase2-grid .doc-card figcaption {
+        font-size: 0.85rem !important;
+        line-height: 1.4;
+    }
+}
+
