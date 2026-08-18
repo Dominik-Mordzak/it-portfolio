@@ -10,8 +10,7 @@ main {
 /* Mobile: reduce sidebar margin so content isn't pushed too far right */
 @media (max-width: 768px) {
     main, .main-container {
-    width: 130% !important;
-    max-width: 100% !important;
+    width: 150% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
     padding: 2.5rem 1rem !important; /* Lowers side padding to 1rem so text has absolute maximum room to stretch */
@@ -83,9 +82,10 @@ main {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 1fr; /* Hardlocks a clean single column layout on mobile screens */
     gap: 1.5rem;
 }
+
 
 .skill-card {
     background-color: #161b22; 
@@ -135,9 +135,7 @@ main {
     }
 
     .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 2.5rem; 
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important; /* Restores side-by-side on desktop views */
     }
     
     .hero-title-inline h1 {
