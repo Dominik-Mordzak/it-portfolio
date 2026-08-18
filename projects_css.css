@@ -8,7 +8,7 @@
 main, .main-container {
     width: 100% !important;
     max-width: 100% !important;
-    margin-left: 0 !important;
+    margin-left: 12rem !important;
     margin-right: 0 !important;
     padding: 2.5rem 1rem !important; /* Reclaims side space so your text isn't squished */
     display: block;

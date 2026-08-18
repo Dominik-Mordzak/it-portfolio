@@ -11,7 +11,7 @@ main {
 @media (max-width: 768px) {
     main, .main-container {
     width: 150% !important;
-    margin-left: 0 !important;
+    margin-left: 12rem !important;
     margin-right: 0 !important;
     padding: 2.5rem 1rem !important; /* Lowers side padding to 1rem so text has absolute maximum room to stretch */
     box-sizing: border-box !important;
