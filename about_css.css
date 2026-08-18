@@ -5,7 +5,7 @@ main {
     width: 120% !important;
     margin-left: 10rem !important;   /* Mobile: clears the fixed 5rem sidebar */
     margin-right: 0 !important;
-    padding: 1rem 1.2rem !important;
+    padding: 2rem 1.2rem !important;
     box-sizing: border-box;
     display: block;
 }
@@ -13,7 +13,7 @@ main {
 .about-header {
     background: linear-gradient(135deg, #156082 0%, #004d7a 100%); /* Same premium blue background layout gradient */
     padding: 3rem 2rem; /* Clean internal breathing space around the profile text text */
-    margin-top: 1rem; /* Creates a uniform spacing gap from the top of the viewport ceiling */
+    margin-top: 3.5rem; /* Creates a uniform spacing gap from the top of the viewport ceiling */
     border-radius: 0.75rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     width: 100%;

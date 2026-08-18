@@ -2,16 +2,16 @@
    Homepage Desktop Two-Column Split (Fills Empty Space Elegantly)
    ========================================================================== */
 main {
-    margin-left: 12rem;
-    padding: 3.5rem 2rem;
-    max-width: 1400px;
+    margin-left: 0;
+    padding: 2.5rem 1rem;
+    max-width: 100%;
 }
 
 /* Mobile: reduce sidebar margin so content isn't pushed too far right */
 @media (max-width: 768px) {
     main, .main-container {
     width: 150% !important;
-    margin-left: 12rem !important;
+    margin-left: 0 !important;
     margin-right: 0 !important;
     padding: 2.5rem 1rem !important; /* Lowers side padding to 1rem so text has absolute maximum room to stretch */
     box-sizing: border-box !important;
@@ -114,34 +114,43 @@ main {
 }
 
 
-/* ==========================================================================
-   WIDESCREEN ENGINE: Perfect Horizontal Gap & Non-Wrapping Alignment
-   ========================================================================== */
 @media (min-width: 1024px) {
+    /* 1. Paste the fixed desktop spacing rules right here: */
+    main, .main-container {
+        max-width: 1650px !important;    
+        margin-left: 11.5rem !important; 
+        padding-left: 16rem !important;  
+        padding-right: 4rem !important;
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+    }
+
+    /* 2. Your existing container rules stay perfectly untouched right below it: */
     .home-container {
-        flex-direction: row; 
+        flex-direction: row;
         align-items: flex-start;
-        gap: 12rem; /* MASSIVE BUFFER: Pushes the technical competencies card grid far to the right */
+        gap: 12rem; 
     }
 
     .hero-section {
-        flex: 1.4; /* Widens the left column significantly so your name has full horizontal runway */
-        position: relative; 
+        flex: 1.4;
+        position: relative;
         top: 0;
     }
 
     .skills-section {
-        flex: 1.8; /* Keeps the right column perfectly proportioned for the two-column card layout */
+        flex: 1.8;
     }
 
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important; /* Restores side-by-side on desktop views */
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
     }
-    
+
     .hero-title-inline h1 {
         white-space: nowrap;
     }
 }
+
 
 /* ==========================================================================
    Featured Project Section (Restored Styles)

@@ -8,7 +8,7 @@
 main, .main-container {
     width: 100% !important;
     max-width: 100% !important;
-    margin-left: 12rem !important;
+    margin-left: 0 !important;
     margin-right: 0 !important;
     padding: 2.5rem 1rem !important; /* Reclaims side space so your text isn't squished */
     display: block;
@@ -168,29 +168,27 @@ main, .main-container {
 }
 
 
-/* ==========================================================================
-   3. CONSOLIDATED DESKTOP WIDESCREEN ENGINE (Monitors over 1024px wide)
-   ========================================================================== */
 @media (min-width: 1024px) {
+    /* 1. Paste this desktop spacing engine block right at the top: */
     main, .main-container {
         max-width: 1650px !important;   
-        margin-left: 11.5rem !important; /* Structural sidebar menu clearance */
-        padding-left: 9rem !important;  /* Premium widescreen separation gap */
-        padding-right: 6rem !important;
+        margin-left: 11.5rem !important; /* Premium sidebar tracking clearance */
+        padding-left: 16rem !important;  /* Restores your large widescreen separation gap */
+        padding-right: 4rem !important;
         padding-top: 3.5rem !important;
         padding-bottom: 3.5rem !important;
     }
 
+    /* 2. All your existing widescreen project styles follow right below it: */
     .project-banner {
         padding: 4.5rem 4rem; 
-        margin-top: 4.5rem; /* Clean layout flow across page frameworks */
+        margin-top: 4.5rem; 
     }
 
     .case-section {
         padding: 2.5rem;
     }
 
-    /* Universal Documentation Symmetrical Row Setup */
     .evidence-grid.dual-row.small-figures.doc-boost {
         max-width: 1150px !important;
         margin-left: auto;
@@ -200,7 +198,6 @@ main, .main-container {
         gap: 3rem !important;
     }
 
-    /* Phase 2: Tailored 80/20 Terminal Text Grid Split */
     .evidence-grid.phase2-grid {
         display: grid !important;
         grid-template-columns: 4fr 1fr !important; 
@@ -208,6 +205,7 @@ main, .main-container {
         max-width: 1300px !important;
         margin-left: auto;
         margin-right: auto;
+        align-items: start;
     }
 
     .phase2-grid .doc-card img {
@@ -219,7 +217,6 @@ main, .main-container {
         line-height: 1.4;
     }
 
-    /* Custom layout macro clip box for figure zoom tracking */
     .macro-zoom-cli a {
         display: block;
         width: 100%;
@@ -237,7 +234,6 @@ main, .main-container {
         border: none !important;
     }
 
-    /* Click-to-Zoom interactive styling definitions */
     .doc-card img {
         max-height: 380px !important;
         height: auto !important;
