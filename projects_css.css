@@ -116,7 +116,16 @@ main {
 
 /* Responsive adjustment for small displays */
 @media (max-width: 768px) {
-    main { margin-left: 10rem !important; padding: 2rem 1rem !important; }
+    main, .main-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 2.5rem 1rem !important; /* Forces the hardware sections to expand to the glass edges */
+    box-sizing: border-box !important;
+    display: block;
+}
+
     .case-section { padding: 1.5rem; }
     .evidence-grid.dual-row.small-figures .evidence-card { max-width: 100%; }
 }

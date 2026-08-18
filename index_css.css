@@ -9,10 +9,15 @@ main {
 
 /* Mobile: reduce sidebar margin so content isn't pushed too far right */
 @media (max-width: 768px) {
-    main {
-        margin-left: 10rem;
-        padding: 2rem 1.2rem;
-    }
+    main, .main-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 2.5rem 1rem !important; /* Lowers side padding to 1rem so text has absolute maximum room to stretch */
+    box-sizing: border-box !important;
+    display: block;
+}
 }
 
 /* Base structural layout for your text and cards */
