@@ -1,28 +1,36 @@
 /* ==========================================================================
-   HOMEPAGE
+   INDEX / HOME PAGE
+   MOBILE-FIRST LAYOUT
    ========================================================================== */
 
+
 /* --------------------------------------------------------------------------
-   MAIN PAGE CONTAINER
+   MAIN CONTENT
    -------------------------------------------------------------------------- */
 
 main {
-    width: min(1400px, calc(100% - 11.5rem));
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3.5rem 2rem;
+    width: 100% !important;
+
+    /* 5rem sidebar + 3rem extra breathing room */
+    margin-left: 8rem !important;
+    margin-right: 0 !important;
+
+    padding: 2rem 2rem 2rem 0 !important;
+
     box-sizing: border-box;
+    display: block;
 }
 
 
 /* --------------------------------------------------------------------------
-   HOME LAYOUT
+   HOME CONTENT
    -------------------------------------------------------------------------- */
 
 .home-container {
     display: flex;
     flex-direction: column;
-    gap: 3.5rem;
+    gap: 2.5rem;
+    width: 100%;
 }
 
 
@@ -31,39 +39,48 @@ main {
    -------------------------------------------------------------------------- */
 
 .hero-section {
+    width: 100%;
     max-width: 100%;
-    background: linear-gradient(135deg, #156082 0%, #004d7a 100%);
-    padding: 3.5rem 3rem;
+
+    background: linear-gradient(
+        135deg,
+        #156082 0%,
+        #004d7a 100%
+    );
+
+    padding: 2rem 1.5rem;
     border-radius: 0.75rem;
     box-sizing: border-box;
+
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hero-title-inline h1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     color: #ffffff;
-    line-height: 1.1;
+    line-height: 1.15;
     letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+    white-space: normal;
 }
 
 .hero-section h1 {
-    font-size: 3.25rem;
     color: #ffffff;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.5px;
 }
 
 .hero-section h2 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: #00a8ff;
-    margin-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
     font-weight: 600;
+    line-height: 1.4;
 }
 
 .elevator-pitch {
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: #e2e8f0;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 
@@ -76,35 +93,44 @@ main {
 }
 
 .skills-section h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: #ffffff;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 0.75rem;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
+
+    /* Mobile-first: one card per row */
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+    width: 100%;
 }
 
 .skill-card {
     background-color: #161b22;
-    padding: 2rem 1.5rem;
+
+    padding: 1.5rem 1.25rem;
+
     border-radius: 0.5rem;
     border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-sizing: border-box;
 }
 
 .skill-card i {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #00a8ff;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     display: block;
 }
 
 .skill-card h4 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #ffffff;
     margin-bottom: 0.75rem;
 }
@@ -117,88 +143,80 @@ main {
 
 
 /* --------------------------------------------------------------------------
-   DESKTOP TWO-COLUMN LAYOUT
-   -------------------------------------------------------------------------- */
-
-@media (min-width: 1024px) {
-
-    .home-container {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 12rem;
-    }
-
-    .hero-section {
-        flex: 1.4;
-    }
-
-    .skills-section {
-        flex: 1.8;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 2.5rem;
-    }
-
-    .hero-title-inline h1 {
-        white-space: nowrap;
-    }
-}
-
-
-/* --------------------------------------------------------------------------
    FEATURED PROJECT
    -------------------------------------------------------------------------- */
 
 .featured-project {
     width: 100%;
-    margin-top: 4.5rem;
+    margin-top: 2rem;
     clear: both;
 }
 
 .featured-project h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #ffffff;
-    margin-bottom: 2.5rem;
+
+    margin-bottom: 1.5rem;
+
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 0.75rem;
 }
 
 .project-banner {
     width: 100%;
-    box-sizing: border-box;
-    background: linear-gradient(135deg, #156082 0%, #004d7a 100%);
-    padding: 3.5rem 3rem;
+
+    background: linear-gradient(
+        135deg,
+        #156082 0%,
+        #004d7a 100%
+    );
+
+    padding: 1.75rem 1.5rem;
+
     border-radius: 0.75rem;
+    box-sizing: border-box;
+
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .project-text h4 {
-    font-size: 1.75rem;
+    font-size: 1.3rem;
     color: #ffffff;
+
     margin-bottom: 1rem;
+
+    line-height: 1.35;
 }
 
 .project-text p {
     color: #f8fafc;
-    font-size: 1.15rem;
-    margin-bottom: 2.5rem;
-    max-width: 800px;
-    line-height: 1.8;
+    font-size: 1rem;
+
+    margin-bottom: 1.5rem;
+
+    max-width: none;
+    line-height: 1.7;
 }
 
 .project-btn {
     display: inline-block;
+
     background-color: #ffffff;
     color: #004d7a;
-    padding: 0.85rem 1.75rem;
+
+    padding: 0.75rem 1.5rem;
+
     border-radius: 0.5rem;
     text-decoration: none;
+
     font-weight: bold;
-    font-size: 1.05rem;
+    font-size: 1rem;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s, background-color 0.2s;
+
+    transition:
+        transform 0.2s,
+        background-color 0.2s;
 }
 
 .project-btn:hover {
@@ -208,156 +226,147 @@ main {
 
 
 /* ==========================================================================
-   MOBILE
+   DESKTOP
+   Only change the layout at 1024px and above.
    ========================================================================== */
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
+
+    /* ----------------------------------------------------------------------
+       MAIN CONTENT
+       ---------------------------------------------------------------------- */
 
     main {
         width: 100% !important;
-        margin-left: 8rem !important;
-        margin-right: 0 !important;
-        padding: 2rem 2rem 2rem 0 !important;
+
+        max-width: 1600px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        padding-top: 4.5rem !important;
+        padding-right: 3rem !important;
+        padding-bottom: 4.5rem !important;
+        padding-left: 10rem !important;
+
         box-sizing: border-box;
-        max-width: none !important;
     }
+
+
+    /* ----------------------------------------------------------------------
+       TWO-COLUMN HOME LAYOUT
+       ---------------------------------------------------------------------- */
 
     .home-container {
-        width: 100%;
         display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
+
+        flex-direction: row;
+
+        align-items: flex-start;
+
+        /* Smaller than the old 12rem gap */
+        gap: 6rem;
+
+        width: 100%;
     }
 
-    .hero-section,
-    .skills-section,
-    .featured-project {
-        width: 100%;
-        max-width: 100%;
-    }
+
+    /* ----------------------------------------------------------------------
+       HERO
+       ---------------------------------------------------------------------- */
 
     .hero-section {
-        padding: 2rem 1.5rem;
-        box-sizing: border-box;
+        flex: 1.4;
+
+        padding: 3.5rem 3rem;
+
+        position: relative;
+        top: 0;
     }
 
     .hero-title-inline h1 {
-        font-size: 2rem;
-        line-height: 1.15;
-        white-space: normal;
+        font-size: 3rem;
+        white-space: nowrap;
     }
 
     .hero-section h2 {
-        font-size: 1.1rem;
-        line-height: 1.4;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     .elevator-pitch {
-        font-size: 0.95rem;
-        line-height: 1.65;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .skill-card {
-        padding: 1.25rem;
-    }
-
-    .featured-project {
-        width: 100%;
-    }
-
-    .project-banner {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 1.5rem 1.25rem;
-    }
-
-    .project-text h4 {
-        font-size: 1.25rem;
-        line-height: 1.35;
-    }
-
-    .project-text p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        max-width: none;
+        font-size: 1.15rem;
+        line-height: 1.8;
     }
 
 
-
-
-    /* ----------------------------------------------------------
+    /* ----------------------------------------------------------------------
        TECHNICAL COMPETENCIES
-       ---------------------------------------------------------- */
+       ---------------------------------------------------------------------- */
+
+    .skills-section {
+        flex: 1.8;
+    }
 
     .skills-section h3 {
-        font-size: 1.4rem;
-        margin-bottom: 1.25rem;
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
     }
 
     .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        display: grid;
+
+        grid-template-columns:
+            repeat(auto-fit, minmax(260px, 1fr));
+
+        gap: 2.5rem;
     }
 
     .skill-card {
-        padding: 1.25rem;
+        padding: 2rem 1.5rem;
     }
 
     .skill-card i {
-        font-size: 1.9rem;
-        margin-bottom: 0.75rem;
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
     }
 
     .skill-card h4 {
-        font-size: 1.1rem;
-    }
-
-    .skill-card p {
-        font-size: 0.9rem;
-        line-height: 1.55;
+        font-size: 1.2rem;
     }
 
 
-    /* ----------------------------------------------------------
+    /* ----------------------------------------------------------------------
        FEATURED PROJECT
-       ---------------------------------------------------------- */
+       ---------------------------------------------------------------------- */
 
     .featured-project {
         width: 100%;
-        margin-top: 2rem;
+        margin-top: 4.5rem;
     }
 
     .featured-project h3 {
-        font-size: 1.4rem;
-        margin-bottom: 1.25rem;
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
     }
 
     .project-banner {
-        width: 100%;
-        padding: 1.5rem 1.25rem;
-        box-sizing: border-box;
+        padding: 3.5rem 3rem;
     }
 
     .project-text h4 {
-        font-size: 1.25rem;
-        line-height: 1.35;
-        margin-bottom: 0.75rem;
+        font-size: 1.75rem;
     }
 
     .project-text p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-        max-width: none;
+        font-size: 1.15rem;
+        max-width: 800px;
+        line-height: 1.8;
+        margin-bottom: 2.5rem;
     }
 
     .project-btn {
-        font-size: 0.95rem;
-        padding: 0.75rem 1.25rem;
+        padding: 0.85rem 1.75rem;
+        font-size: 1.05rem;
     }
 }
