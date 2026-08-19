@@ -7,16 +7,62 @@ main {
     max-width: 100%;
 }
 
-/* Mobile: reduce sidebar margin so content isn't pushed too far right */
 @media (max-width: 768px) {
-    main, .main-container {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 2.5rem 1rem !important; /* Lowers side padding to 1rem so text has absolute maximum room to stretch */
-    box-sizing: border-box !important;
-    display: block;
-}
+    main {
+        /* 5rem sidebar + 1.5rem breathing room */
+        margin-left: 11rem;
+        width: calc(100% - 6.5rem);
+        max-width: none;
+        padding: 2rem 1rem 2rem 0;
+    }
+
+    .home-container {
+        width: 100%;
+        gap: 2.5rem;
+    }
+
+    .hero-section,
+    .skills-section,
+    .featured-project {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-title-inline h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+        white-space: normal;
+    }
+
+    .hero-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .elevator-pitch {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .skill-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .project-banner {
+        padding: 2rem 1.25rem;
+    }
+
+    .project-text h4 {
+        font-size: 1.35rem;
+    }
+
+    .project-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
 }
 
 /* Base structural layout for your text and cards */
