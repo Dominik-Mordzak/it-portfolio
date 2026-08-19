@@ -7,9 +7,11 @@
    -------------------------------------------------------------------------- */
 
 main {
-    margin-left: 9.5rem;
+    width: min(1400px, calc(100% - 11.5rem));
+    margin-left: auto;
+    margin-right: auto;
     padding: 3.5rem 2rem;
-    max-width: 1400px;
+    box-sizing: border-box;
 }
 
 
@@ -30,6 +32,11 @@ main {
 
 .hero-section {
     max-width: 100%;
+    background: linear-gradient(135deg, #156082 0%, #004d7a 100%);
+    padding: 3.5rem 3rem;
+    border-radius: 0.75rem;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hero-title-inline h1 {
