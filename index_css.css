@@ -214,19 +214,18 @@ main {
 @media (max-width: 768px) {
 
     main {
-        /* More room between sidebar and page content */
-        margin-left: 11rem;
-
-        /* Keep the content wide */
-        width: 650px;
-        max-width: none;
-
-        /* Small amount of space around the content */
-        padding: 2rem 0;
+        width: 100% !important;
+        margin-left: 8rem !important;
+        margin-right: 0 !important;
+        padding: 2rem 2rem 2rem 0 !important;
+        box-sizing: border-box;
+        max-width: none !important;
     }
 
     .home-container {
         width: 100%;
+        display: flex;
+        flex-direction: column;
         gap: 2.5rem;
     }
 
@@ -235,6 +234,11 @@ main {
     .featured-project {
         width: 100%;
         max-width: 100%;
+    }
+
+    .hero-section {
+        padding: 2rem 1.5rem;
+        box-sizing: border-box;
     }
 
     .hero-title-inline h1 {
@@ -254,7 +258,7 @@ main {
     }
 
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
@@ -269,19 +273,20 @@ main {
     .project-banner {
         width: 100%;
         box-sizing: border-box;
-        padding: 1.75rem 1.5rem;
+        padding: 1.5rem 1.25rem;
     }
 
     .project-text h4 {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
         line-height: 1.35;
     }
 
     .project-text p {
-        font-size: 1rem;
+        font-size: 0.95rem;
         line-height: 1.6;
         max-width: none;
     }
+
 
 
 
