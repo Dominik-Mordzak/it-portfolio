@@ -9,11 +9,10 @@ main {
 
 @media (max-width: 768px) {
     main {
-        /* 5rem sidebar + 1.5rem breathing room */
-        margin-left: 11rem;
-        width: calc(100% - 6.5rem);
+        margin-left: 10rem;
+        width: calc(100% - 12rem);
         max-width: none;
-        padding: 2rem 1rem 2rem 0;
+        padding: 2rem 0;
     }
 
     .home-container {
