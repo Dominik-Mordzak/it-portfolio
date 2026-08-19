@@ -10,12 +10,11 @@
 
 main {
     width: 100% !important;
-
-    /* 5rem sidebar + 3rem extra breathing room */
-    margin-left: 10rem !important;
+    margin-left: 5rem !important;
     margin-right: 0 !important;
 
-    padding: 2rem 2rem 2rem 0 !important;
+    /* THIS creates the extra gap */
+    padding: 2rem 2rem 2rem 5rem !important;
 
     box-sizing: border-box;
     display: block;
