@@ -10,11 +10,12 @@
 
 main {
     width: 100% !important;
-    margin-left: 5rem !important;
+
+    /* 5rem sidebar + 3rem extra breathing room */
+    margin-left: 8rem !important;
     margin-right: 0 !important;
 
-    /* Extra space between sidebar and page content */
-    padding: 2rem 2rem 2rem 5rem !important;
+    padding: 2rem 2rem 2rem 0 !important;
 
     box-sizing: border-box;
     display: block;
@@ -103,7 +104,7 @@ main {
 .skills-grid {
     display: grid;
 
-    /* Mobile: one card per row */
+    /* Mobile-first: one card per row */
     grid-template-columns: 1fr;
 
     gap: 1rem;
@@ -183,6 +184,7 @@ main {
     color: #ffffff;
 
     margin-bottom: 1rem;
+
     line-height: 1.35;
 }
 
@@ -230,18 +232,22 @@ main {
 
 @media (min-width: 1024px) {
 
+    /* ----------------------------------------------------------------------
+       MAIN CONTENT
+       ---------------------------------------------------------------------- */
+
     main {
         width: 100% !important;
+
         max-width: 1600px !important;
 
         margin-left: auto !important;
         margin-right: auto !important;
 
-        padding-left: 13rem !important;
-        padding-right: 3rem !important;
-
         padding-top: 4.5rem !important;
+        padding-right: 3rem !important;
         padding-bottom: 4.5rem !important;
+        padding-left: 10rem !important;
 
         box-sizing: border-box;
     }
@@ -258,7 +264,7 @@ main {
 
         align-items: flex-start;
 
-        /* Space between hero and technical competencies */
+        /* Smaller than the old 12rem gap */
         gap: 6rem;
 
         width: 100%;
