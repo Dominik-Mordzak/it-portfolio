@@ -1,106 +1,36 @@
 /* ==========================================================================
-   Homepage Desktop Two-Column Split (Fills Empty Space Elegantly)
+   HOMEPAGE
    ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   MAIN PAGE CONTAINER
+   -------------------------------------------------------------------------- */
+
 main {
-    margin-left: 0;
-    padding: 2.5rem 1rem;
-    max-width: 100%;
+    margin-left: 9.5rem;
+    padding: 3.5rem 2rem;
+    max-width: 1400px;
 }
 
-@media (max-width: 768px) {
 
-    main {
-        /* 5rem sidebar + 2.5rem gap */
-        margin-left: 7.5rem;
+/* --------------------------------------------------------------------------
+   HOME LAYOUT
+   -------------------------------------------------------------------------- */
 
-        /* Use almost all remaining phone width */
-        width: calc(100% - 9.5rem);
-
-        max-width: none;
-
-        /* 2rem top/bottom, no extra right padding */
-        padding: 2rem 0;
-    }
-
-    .home-container {
-        width: 100%;
-        gap: 2.5rem;
-    }
-
-    .hero-section,
-    .skills-section,
-    .featured-project {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .hero-title-inline h1 {
-        font-size: 2rem;
-        line-height: 1.1;
-        white-space: normal;
-    }
-
-    .hero-section h2 {
-        font-size: 1.1rem;
-        line-height: 1.4;
-    }
-
-    .elevator-pitch {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .skill-card {
-        padding: 1.25rem;
-    }
-
-    /* Make the banner use the full available content width */
-    .featured-project {
-        width: 100%;
-    }
-
-    .project-banner {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 1.75rem 1.25rem;
-    }
-
-    .project-text h4 {
-        font-size: 1.25rem;
-        line-height: 1.35;
-    }
-
-    .project-text p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-}
-
-/* Base structural layout for your text and cards */
 .home-container {
     display: flex;
-    flex-direction: column; /* Standard stacked layout for phone viewports */
+    flex-direction: column;
     gap: 3.5rem;
 }
 
-/* The Left Side Column: Text content configuration */
-.hero-section {
-    background: linear-gradient(135deg, #156082 0%, #004d7a 100%); /* Same premium blue background gradient */
-    padding: 4.5rem 3.5rem !important; /* Expands deep layout breathing padding around your name and title */
-    margin-top: 3.5rem; /* Creates a uniform spacing gap from the top of the viewport ceiling */
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    width: 100%;
-    margin-bottom: 3rem;
-    text-align: left;
-    flex: 1.4 !important;
-    }
 
+/* --------------------------------------------------------------------------
+   HERO / INTRODUCTION
+   -------------------------------------------------------------------------- */
+
+.hero-section {
+    max-width: 100%;
+}
 
 .hero-title-inline h1 {
     font-size: 3rem;
@@ -108,7 +38,6 @@ main {
     line-height: 1.1;
     letter-spacing: -0.5px;
 }
-
 
 .hero-section h1 {
     font-size: 3.25rem;
@@ -119,7 +48,7 @@ main {
 
 .hero-section h2 {
     font-size: 1.5rem;
-    color: #00a8ff; /* Clean electric blue accent */
+    color: #00a8ff;
     margin-bottom: 2rem;
     font-weight: 600;
 }
@@ -130,7 +59,11 @@ main {
     line-height: 1.8;
 }
 
-/* The Right Side Column: Grid layout spacing adjustments */
+
+/* --------------------------------------------------------------------------
+   TECHNICAL COMPETENCIES
+   -------------------------------------------------------------------------- */
+
 .skills-section {
     width: 100%;
 }
@@ -139,47 +72,21 @@ main {
     font-size: 1.75rem;
     color: #ffffff;
     margin-bottom: 2rem;
-    border-bottom: 2px solid rgba(255,255,255,0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 0.75rem;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Hardlocks a clean single column layout on mobile screens */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
 }
 
-/* ==========================================================================
-   WIDESCREEN ENGINE: Restores Desktop Sidebar Separation & Layout Balance
-   ========================================================================== */
-@media screen and (min-width: 1024px) {
-    main, .main-container {
-    max-width: 1550px !important;    
-    margin-left: 10rem !important;   /* Pulls content closer to the sidebar menu */
-    padding-left: 5rem !important;    /* Narrows the empty space so your header and cards widen */
-    padding-right: 2.5rem !important;
-    padding-top: 3.5rem !important;
-    padding-bottom: 3.5rem !important;
-}
-
-
-    .home-container {
-        flex-direction: row !important; /* Side-by-side split row viewports for monitor screens */
-        align-items: flex-start !important;
-        gap: 6rem !important; 
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important; /* Restores side-by-side rows on desktop views */
-    }
-}
-
-
 .skill-card {
-    background-color: #161b22; 
+    background-color: #161b22;
     padding: 2rem 1.5rem;
     border-radius: 0.5rem;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .skill-card i {
@@ -201,27 +108,21 @@ main {
     line-height: 1.6;
 }
 
-    /* 1. Paste the fixed desktop spacing rules right here: */
-    main, .main-container {
-        max-width: 1650px !important;    
-        margin-left: 11.5rem !important; 
-        padding-left: 16rem !important;  
-        padding-right: 4rem !important;
-        padding-top: 3.5rem !important;
-        padding-bottom: 3.5rem !important;
-    }
 
-    /* 2. Your existing container rules stay perfectly untouched right below it: */
+/* --------------------------------------------------------------------------
+   DESKTOP TWO-COLUMN LAYOUT
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 1024px) {
+
     .home-container {
         flex-direction: row;
         align-items: flex-start;
-        gap: 12rem; 
+        gap: 12rem;
     }
 
     .hero-section {
         flex: 1.4;
-        position: relative;
-        top: 0;
     }
 
     .skills-section {
@@ -229,21 +130,23 @@ main {
     }
 
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2.5rem;
     }
 
     .hero-title-inline h1 {
         white-space: nowrap;
     }
+}
 
 
+/* --------------------------------------------------------------------------
+   FEATURED PROJECT
+   -------------------------------------------------------------------------- */
 
-/* ==========================================================================
-   Featured Project Section (Restored Styles)
-   ========================================================================== */
 .featured-project {
     width: 100%;
-    margin-top: 4.5rem; /* Creates a comfortable gap below the columns */
+    margin-top: 4.5rem;
     clear: both;
 }
 
@@ -255,23 +158,24 @@ main {
     padding-bottom: 0.75rem;
 }
 
-/* Featured Project Banner Box */
 .project-banner {
+    width: 100%;
+    box-sizing: border-box;
     background: linear-gradient(135deg, #156082 0%, #004d7a 100%);
-    padding: 3.5rem 3rem; /* Expanded banner size to feel substantial */
+    padding: 3.5rem 3rem;
     border-radius: 0.75rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .project-text h4 {
-    font-size: 1.75rem; /* Bold, punchy project title */
+    font-size: 1.75rem;
     color: #ffffff;
     margin-bottom: 1rem;
 }
 
 .project-text p {
     color: #f8fafc;
-    font-size: 1.15rem; /* Clear project description size */
+    font-size: 1.15rem;
     margin-bottom: 2.5rem;
     max-width: 800px;
     line-height: 1.8;
@@ -281,12 +185,12 @@ main {
     display: inline-block;
     background-color: #ffffff;
     color: #004d7a;
-    padding: 0.85rem 1.75rem; /* Substantial, easy-to-click button size */
+    padding: 0.85rem 1.75rem;
     border-radius: 0.5rem;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.05rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s, background-color 0.2s;
 }
 
@@ -296,4 +200,141 @@ main {
 }
 
 
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
 
+@media (max-width: 768px) {
+
+    /* ----------------------------------------------------------
+       PAGE WIDTH
+       ---------------------------------------------------------- */
+
+    main {
+        /*
+         * Sidebar = 5rem
+         * Extra clearance = 3rem
+         * Right breathing room = 2rem
+         */
+        margin-left: 8rem;
+        width: calc(100% - 10rem);
+        max-width: none;
+        padding: 2rem 0;
+    }
+
+
+    /* ----------------------------------------------------------
+       HOME CONTENT
+       ---------------------------------------------------------- */
+
+    .home-container {
+        width: 100%;
+        gap: 2.5rem;
+    }
+
+
+    /* ----------------------------------------------------------
+       HERO
+       ---------------------------------------------------------- */
+
+    .hero-section,
+    .skills-section,
+    .featured-project {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-title-inline h1 {
+        font-size: 2rem;
+        line-height: 1.15;
+        letter-spacing: -0.25px;
+        white-space: normal;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+    }
+
+    .elevator-pitch {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+
+    /* ----------------------------------------------------------
+       TECHNICAL COMPETENCIES
+       ---------------------------------------------------------- */
+
+    .skills-section h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .skill-card {
+        padding: 1.25rem;
+    }
+
+    .skill-card i {
+        font-size: 1.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .skill-card h4 {
+        font-size: 1.1rem;
+    }
+
+    .skill-card p {
+        font-size: 0.9rem;
+        line-height: 1.55;
+    }
+
+
+    /* ----------------------------------------------------------
+       FEATURED PROJECT
+       ---------------------------------------------------------- */
+
+    .featured-project {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .featured-project h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .project-banner {
+        width: 100%;
+        padding: 1.5rem 1.25rem;
+        box-sizing: border-box;
+    }
+
+    .project-text h4 {
+        font-size: 1.25rem;
+        line-height: 1.35;
+        margin-bottom: 0.75rem;
+    }
+
+    .project-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        max-width: none;
+    }
+
+    .project-btn {
+        font-size: 0.95rem;
+        padding: 0.75rem 1.25rem;
+    }
+}
