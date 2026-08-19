@@ -1,275 +1,544 @@
 /* ==========================================================================
-   1. GLOBAL MOBILE-FIRST BASELINES (Default for Galaxy S22+ and Mobile)
+   PROJECTS PAGE
+   Mobile-first layout
    ========================================================================== */
-* {
-    box-sizing: border-box;
-}
 
-main, .main-container {
-    width: 100% !important;
+
+/* ==========================================================================
+   MAIN CONTENT
+   ========================================================================== */
+
+main,
+.main-container {
+    width: 120% !important;
     max-width: 100% !important;
-    margin-left: 0 !important;
+
+    /* Same basic mobile positioning as the About page */
+    margin-left: 10rem !important;
     margin-right: 0 !important;
-    padding: 2.5rem 1rem !important; /* Reclaims side space so your text isn't squished */
-    display: block;
-}
 
-/* Project Page Header Banner */
-.project-banner {
-    background: linear-gradient(135deg, #156082 0%, #004d7a 100%);
-    padding: 3rem 2rem; 
-    margin-top: 3.5rem; /* Standard separation gap from page ceiling */
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    width: 100% !important; /* FIXED: Swapped 150% to 100% so it doesn't break out on your S22+ */
-    margin-bottom: 3rem;
-}
+    padding: 2rem 1.2rem !important;
 
-.project-text h1 {
-    font-size: 2.2rem;
-    color: #ffffff;
-    font-weight: normal; 
-    margin-top: 0;
-    margin-bottom: 1rem;
-    line-height: 1.3;
-}
-
-.project-text p {
-    color: #f8fafc;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-top: 0;
-    margin-bottom: 2rem;
-}
-
-/* Inline horizontal metadata rules */
-.report-meta {
-    display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap;
-    gap: 2.5rem; 
-}
-
-.report-meta span {
-    color: #a4cbdc; 
-    font-size: 0.95rem;
-}
-
-/* Individual Case Phase Card Layouts */
-.case-section {
-    background-color: #161b22; 
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    margin-bottom: 2.5rem;
-}
-
-.case-section h3 {
-    font-size: 1.25rem;
-    color: #ffffff;
-    margin-top: 0;
-    margin-bottom: 1.25rem;
-}
-
-.case-section p {
-    color: #c9d1d9;
-    line-height: 1.7;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Mobile Flex Box Stacking Engine */
-.evidence-grid {
-    display: flex !important;
-    flex-direction: column !important; /* Everything defaults to a roomy column on your phone */
-    gap: 1.5rem !important;
-    width: 100% !important;
-    margin-top: 2rem;
-}
-
-/* Standardized Mobile Card Footprint */
-.evidence-card, .doc-card {
-    width: 100% !important;
-    max-width: 100% !important; 
-    background-color: #0d1117;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 0.5rem;
-    padding: 1.25rem !important;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
     box-sizing: border-box;
-}
-
-/* Proportional Fluid Image Rules for Mobile viewports */
-.evidence-card img, .doc-card img {
-    width: 100% !important;
-    height: auto !important; 
-    max-width: 100%;
-    object-fit: contain !important;
-    border-radius: 0.3rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     display: block;
-    margin-bottom: 1rem;
-}
-
-.evidence-card figcaption, .doc-card figcaption {
-    text-align: left;
-    color: #8b949e;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.evidence-card figcaption strong, .doc-card figcaption strong {
-    color: #ffffff;
-    font-size: 0.95rem;
-    display: inline-block;
-    margin-bottom: 0.25rem;
-}
-
-.doc-card a {
-    display: block;
-    width: 100%;
 }
 
 
 /* ==========================================================================
-   2. MID-RANGE RESPONSIVE ENGINE (Tablet Monitors over 768px wide)
+   PROJECT HEADER / BANNER
    ========================================================================== */
+
+.project-banner {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    background: linear-gradient(
+        135deg,
+        #156082 0%,
+        #004d7a 100%
+    );
+
+    padding: 2rem 1.5rem;
+
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+
+    border-radius: 0.75rem;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-text {
+    width: 100%;
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.project-text h1 {
+    color: #ffffff;
+
+    font-size: 2rem;
+    line-height: 1.25;
+
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.project-text p {
+    color: #f8fafc;
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+
+    overflow-wrap: break-word;
+}
+
+.report-meta {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    width: 100%;
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    padding-bottom: 0 !important;
+}
+
+.report-meta span {
+    color: #a4cbdc;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    overflow-wrap: break-word;
+}
+
+
+/* ==========================================================================
+   CASE SECTIONS
+   ========================================================================== */
+
+.case-section {
+    width: 100%;
+    max-width: 100%;
+
+    background-color: #161b22;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 0.5rem;
+
+    padding: 1.5rem;
+
+    margin-bottom: 2.5rem;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+.case-section h3 {
+    font-size: 1.25rem;
+
+    color: #ffffff;
+
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+
+    line-height: 1.4;
+
+    overflow-wrap: break-word;
+}
+
+.case-section p {
+    color: #c9d1d9;
+
+    line-height: 1.7;
+
+    font-size: 1rem;
+
+    margin-bottom: 1.5rem;
+
+    overflow-wrap: break-word;
+}
+
+
+/* ==========================================================================
+   EVIDENCE GRIDS - MOBILE
+   ========================================================================== */
+
+.evidence-grid.dual-row {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 2rem;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   EVIDENCE / DOCUMENT CARDS - MOBILE
+   ========================================================================== */
+
+.evidence-grid.dual-row.small-figures .evidence-card,
+.evidence-card.doc-card {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    flex: none !important;
+
+    background-color: #0d1117;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    border-radius: 0.5rem;
+
+    padding: 1rem;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================================
+   MOBILE IMAGES
+   ========================================================================== */
+
+/*
+   These rules are important.
+
+   The old CSS had min-width / max-width rules designed for desktop
+   two-column layouts. On mobile those could make the images/cards wider
+   than the available box.
+
+   These rules force the image to stay inside its actual card.
+*/
+
+.evidence-card a,
+.doc-card a {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+.evidence-card img,
+.doc-card img {
+    display: block;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+
+    object-fit: contain !important;
+
+    box-sizing: border-box;
+
+    border-radius: 0.3rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    margin: 0 0 1rem 0;
+
+    transform: none;
+}
+
+
+/* ==========================================================================
+   MOBILE CAPTIONS
+   ========================================================================== */
+
+.evidence-card figcaption,
+.doc-card figcaption {
+    width: 100%;
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    text-align: left;
+
+    color: #8b949e;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+
+    overflow-wrap: break-word;
+}
+
+.evidence-card figcaption strong,
+.doc-card figcaption strong {
+    color: #ffffff;
+
+    font-size: 0.95rem;
+
+    display: inline-block;
+
+    margin-bottom: 0.25rem;
+}
+
+
+/* ==========================================================================
+   PHASE 2 - MOBILE
+   ========================================================================== */
+
+.evidence-grid.phase2-grid {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    gap: 1.5rem !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* Make sure Phase 2 cards don't inherit desktop sizing */
+.phase2-grid .doc-card {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+.phase2-grid .doc-card img {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+
+    max-height: none !important;
+
+    object-fit: contain !important;
+}
+
+
+/* ==========================================================================
+   TABLET - 768px+
+   ========================================================================== */
+
 @media (min-width: 768px) {
+
     .evidence-grid.dual-row.small-figures {
+        display: grid !important;
+
+        grid-template-columns: 1fr 1fr !important;
+
+        gap: 2.5rem !important;
+
         max-width: 850px;
+
         margin-left: auto;
         margin-right: auto;
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important; /* Side-by-side rows scale up on tablet up */
-        gap: 2.5rem !important;
+    }
+
+    .evidence-grid.dual-row.small-figures .evidence-card {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        padding: 1.25rem;
     }
 
     .evidence-card img {
-        height: 240px !important; 
+        width: 100% !important;
+
+        height: 240px !important;
+
         object-fit: cover !important;
-        margin-bottom: 1.25rem;
-    }
-
-    .evidence-grid.full-width-terminal {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 2.5rem !important;
-        max-width: 1000px !important;
-        margin: 2rem auto 0 auto;
-    }
-
-    .evidence-grid.full-width-terminal .clear-view img {
-        height: 460px !important;
-        object-fit: contain !important;
-        background-color: #010a10;
     }
 }
 
+
+/* ==========================================================================
+   DESKTOP - 1024px+
+   
+   CURRENT DESKTOP VERSION PRESERVED
+   ========================================================================== */
 
 @media (min-width: 1024px) {
-    /* 1. Paste this desktop spacing engine block right at the top: */
-    main, .main-container {
-    max-width: 1550px !important;   
-    margin-left: 10rem !important;   /* Matches your exact sidebar alignment track */
-    padding-left: 5rem !important;    /* Injects the identical visual padding channel */
-    padding-right: 2.5rem !important;
-    padding-top: 3.5rem !important;
-    padding-bottom: 3.5rem !important;
-}
 
+    main,
+    .main-container {
+        max-width: 1550px !important;
 
-    /* 2. All your existing widescreen project styles follow right below it: */
-    .project-banner {
-        padding: 4.5rem 4rem; 
-        margin-top: 4.5rem; 
+        margin-left: 10rem !important;
+
+        padding-left: 5rem !important;
+        padding-right: 2.5rem !important;
+
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+
+        box-sizing: border-box;
     }
+
+
+    /* ----------------------------------------------------------------------
+       PROJECT BANNER
+       ---------------------------------------------------------------------- */
+
+    .project-banner {
+        padding: 4.5rem 4rem;
+
+        margin-top: 4.5rem;
+    }
+
+
+    /* ----------------------------------------------------------------------
+       CASE SECTIONS
+       ---------------------------------------------------------------------- */
 
     .case-section {
         padding: 2.5rem;
     }
 
+
+    /* ----------------------------------------------------------------------
+       STANDARD TWO-COLUMN EVIDENCE GRIDS
+       ---------------------------------------------------------------------- */
+
     .evidence-grid.dual-row.small-figures.doc-boost {
         max-width: 1150px !important;
+
         margin-left: auto;
         margin-right: auto;
+
         display: grid !important;
+
         grid-template-columns: 1fr 1fr !important;
+
         gap: 3rem !important;
     }
 
-    .evidence-grid.phase2-grid {
-        display: grid !important;
-        grid-template-columns: 4fr 1fr !important; 
-        gap: 2.5rem !important;
-        max-width: 1300px !important;
-        margin-left: auto;
-        margin-right: auto;
-        align-items: start;
+
+    /* ----------------------------------------------------------------------
+       DOCUMENT CARDS
+       ---------------------------------------------------------------------- */
+
+    .doc-card {
+        max-width: 100% !important;
+        width: 100% !important;
+
+        padding: 1.5rem !important;
+
+        background-color: #0d1117;
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 0.5rem;
+
+        border: 1px solid rgba(255, 255, 255, 0.05);
+
+        box-sizing: border-box;
     }
 
-    .phase2-grid .doc-card img {
-        max-height: 520px !important; 
-    }
 
-    .phase2-grid .doc-card figcaption {
-        font-size: 0.85rem !important;
-        line-height: 1.4;
-    }
-
-    .macro-zoom-cli a {
-        display: block;
-        width: 100%;
-        height: 340px; 
-        overflow: hidden; 
-        border-radius: 0.3rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background-color: #010a10;
-    }
-
-    .macro-zoom-cli img {
-        width: 135% !important; 
-        height: auto !important;
-        transform: translate(-12%, -5%); 
-        border: none !important;
-    }
+    /* ----------------------------------------------------------------------
+       DOCUMENT IMAGES
+       ---------------------------------------------------------------------- */
 
     .doc-card img {
-        max-height: 380px !important;
+        width: 100% !important;
+
         height: auto !important;
+
+        max-height: 380px;
+
         object-fit: contain !important;
+
         background-color: #010a10;
+
+        border-radius: 0.3rem;
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
         margin-bottom: 1.25rem;
-        transition: transform 0.2s ease, border-color 0.2s ease;
+
+        transition:
+            transform 0.2s ease,
+            border-color 0.2s ease;
     }
 
     .doc-card a {
+        display: block;
+
+        width: 100%;
+
         cursor: zoom-in;
     }
 
     .doc-card a:hover img {
         transform: scale(1.01);
+
         border-color: #00a8ff !important;
     }
-}
-/* ADD THIS COB OUT IN THE OPEN (NOT INSIDE A MEDIA QUERY) FOR YOUR S22+ */
-.evidence-grid.full-width-terminal {
-    display: flex !important;
-    flex-direction: column !important; /* Forces vertical stacking on your phone */
-    gap: 1.5rem !important;            /* Clean mobile spacing */
-    width: 100% !important;            /* Fills out the screen width completely */
-    max-width: 100% !important;
-}
 
-.evidence-grid.full-width-terminal .clear-view {
-    width: 100% !important;
-    max-width: 100% !important;
-}
 
-.evidence-grid.full-width-terminal .clear-view img {
-    width: 100% !important;
-    height: auto !important;          /* Scales proportionally on your device */
-    object-fit: contain !important;
-    background-color: #010a10;
+    /* ----------------------------------------------------------------------
+       PHASE 2 - 80/20 DESKTOP LAYOUT
+       ---------------------------------------------------------------------- */
+
+    .evidence-grid.phase2-grid {
+        display: grid !important;
+
+        grid-template-columns: 4fr 1fr !important;
+
+        gap: 2.5rem !important;
+
+        max-width: 1300px !important;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        align-items: start;
+    }
+
+    .phase2-grid .doc-card img {
+        width: 100% !important;
+
+        height: auto !important;
+
+        max-height: 520px !important;
+
+        object-fit: contain !important;
+
+        background-color: #010a10;
+    }
+
+    .phase2-grid .doc-card figcaption {
+        font-size: 0.85rem !important;
+
+        line-height: 1.4;
+    }
 }
