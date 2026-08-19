@@ -213,36 +213,22 @@ main {
 
 @media (max-width: 768px) {
 
-    /* ----------------------------------------------------------
-       PAGE WIDTH
-       ---------------------------------------------------------- */
-
     main {
-        /*
-         * Sidebar = 5rem
-         * Extra clearance = 3rem
-         * Right breathing room = 2rem
-         */
-        margin-left: 8rem;
-        width: calc(100% - 10rem);
+        /* More room between sidebar and page content */
+        margin-left: 11rem;
+
+        /* Keep the content wide */
+        width: 650px;
         max-width: none;
+
+        /* Small amount of space around the content */
         padding: 2rem 0;
     }
-
-
-    /* ----------------------------------------------------------
-       HOME CONTENT
-       ---------------------------------------------------------- */
 
     .home-container {
         width: 100%;
         gap: 2.5rem;
     }
-
-
-    /* ----------------------------------------------------------
-       HERO
-       ---------------------------------------------------------- */
 
     .hero-section,
     .skills-section,
@@ -254,24 +240,49 @@ main {
     .hero-title-inline h1 {
         font-size: 2rem;
         line-height: 1.15;
-        letter-spacing: -0.25px;
         white-space: normal;
-    }
-
-    .hero-section h1 {
-        font-size: 2rem;
     }
 
     .hero-section h2 {
         font-size: 1.1rem;
         line-height: 1.4;
-        margin-bottom: 1.5rem;
     }
 
     .elevator-pitch {
         font-size: 0.95rem;
         line-height: 1.65;
     }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .skill-card {
+        padding: 1.25rem;
+    }
+
+    .featured-project {
+        width: 100%;
+    }
+
+    .project-banner {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.75rem 1.5rem;
+    }
+
+    .project-text h4 {
+        font-size: 1.35rem;
+        line-height: 1.35;
+    }
+
+    .project-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: none;
+    }
+
 
 
     /* ----------------------------------------------------------
